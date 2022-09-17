@@ -1,0 +1,68 @@
+# Doc: https://rubocop.org/
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1.2
+  TargetRailsVersion: 7.0.4
+  Exclude:
+    - "vendor/**/*"
+    - "bin/**/*"
+    - "db/**/*"
+    - "tmp/**/*"
+
+Rails:
+  Enabled: true
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 160
+
+Layout/BlockEndNewline:
+  Exclude:
+    - "spec/**/*"
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/AbcSize:
+  Max: 35
+
+Metrics/CyclomaticComplexity:
+  Max: 14
+
+Metrics/PerceivedComplexity:
+  Max: 13
+
+Metrics/BlockLength:
+  CountAsOne: ["array", "hash", "heredoc"]
+  Exclude:
+    - "config/routes.rb"
+    - "spec/**/*"
+
+# Doc: https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
+Metrics/MethodLength:
+  CountAsOne: ["array", "hash", "heredoc"]
+  Max: 20
+
+Metrics/ModuleLength:
+  CountAsOne: ["array", "hash", "heredoc"]
