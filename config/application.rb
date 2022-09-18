@@ -42,5 +42,11 @@ module App
     # Confirm autoload_paths at 'pp ActiveSupport::Dependencies.autoload_paths'
     config.add_autoload_paths_to_load_path = false
     config.api_only = true
+
+    # Set log
+    config.paths['log'] = "log/#{Rails.env}_ecmedia.log"
+    logger = ActiveSupport::Logger.new(config.paths['log'].first)
+    logger.formatter = ::Logger::Formatter.new
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 end
