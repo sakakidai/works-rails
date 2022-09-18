@@ -48,5 +48,14 @@ module App
     logger = ActiveSupport::Logger.new(config.paths['log'].first)
     logger.formatter = ::Logger::Formatter.new
     config.logger = ActiveSupport::TaggedLogging.new(logger)
+
+    # Rspec generators
+    config.generators do |g|
+      g.test_framework :rspec,
+        controller_specs: false,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false
+    end
   end
 end

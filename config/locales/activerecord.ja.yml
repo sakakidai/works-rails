@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      company: 企業
+    attributes:
+      company:
+        name: 企業名
+        name_kana: 企業名（カナ）
+        zip_code: 郵便番号
+        address_city: 市区町村
+        address_street: 丁目・番地・号
+        address_building: 建物名
+        president: 代表者
