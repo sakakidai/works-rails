@@ -2,6 +2,11 @@ ja:
   activerecord:
     models:
       company: 企業
+      job: 仕事
+      shift_table: シフト表
+      shift_table_col: シフト表の列
+      shift: シフト
+
     attributes:
       company:
         name: 企業名
@@ -11,3 +16,22 @@ ja:
         address_street: 丁目・番地・号
         address_building: 建物名
         president: 代表者
+      job:
+        prefecture_code: 都道府県コード
+        city_code: 市区町村コード
+        name: 仕事名
+        occupation: 職業
+        payment: 給与
+        location: 勤務地
+        working_hours: 勤務時間
+      shift_table:
+        work_start_on: 開始日
+        work_end_on: 終了日
+      shift_table_col:
+        work_on: 勤務日
+      shift:
+        recruiting_number: 募集人数
+        applicant_number: 応募人数
+        recruited: 募集フラグ
+        work_start_at: 開始時間
+        work_end_at: 終了時間

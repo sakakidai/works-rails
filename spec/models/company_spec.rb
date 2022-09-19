@@ -54,19 +54,19 @@ RSpec.describe Company, type: :model do
       expect(company.errors.full_messages).to include('代表者を入力してください')
     end
 
-    it '郵便番号が7桁の数字であるとき、有効な状態であること' do
+    it '郵便番号が7桁の数字である時、有効な状態であること' do
       company.zip_code = '1110000'
       company.valid?
       expect(company).to be_valid
     end
 
-    it '郵便番号に-が含まれるとき、無効な状態であること' do
+    it '郵便番号に-が含まれる時、無効な状態であること' do
       company.zip_code = '111-0000'
       company.valid?
       expect(company.errors.full_messages).to include('郵便番号は7桁の数字で入力してください')
     end
 
-    it '郵便番号に文字が数字以外が含まれるとき、無効な状態であること' do
+    it '郵便番号に文字が数字以外が含まれる時、無効な状態であること' do
       company.zip_code = '111A000'
       company.valid?
       expect(company.errors.full_messages).to include('郵便番号は7桁の数字で入力してください')

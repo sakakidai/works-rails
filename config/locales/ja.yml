@@ -107,6 +107,10 @@ ja:
       too_long: は%{count}文字以内で入力してください
       too_short: は%{count}文字以上で入力してください
       wrong_length: は%{count}文字で入力してください
+      past_date: は本日以降で入力してください
+      past_time: は現在時刻以降で入力してください
+      too_long_period: と%{end_date}の期間は%{max_days}日以内を入力してください
+      earlier_than_end: "は%{end_date}よりも前に設定してください"
     template:
       body: 次の項目を確認してください
       header: "%{model}に%{count}個のエラーが発生しました"
