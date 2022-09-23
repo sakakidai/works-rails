@@ -37,6 +37,12 @@ Style/Documentation:
 Style/NumericLiteralPrefix:
   Enabled: false
 
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
 Layout/LineLength:
   Max: 160
 
